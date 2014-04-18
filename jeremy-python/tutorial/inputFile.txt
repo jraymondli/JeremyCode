@@ -1,0 +1,7 @@
+
+This is an input file
+
+It can be changedm while the program does not need to be changed.
+
+
+

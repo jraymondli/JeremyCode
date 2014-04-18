@@ -1,0 +1,4 @@
+yes=correct
+YES=correct
+etwkghrids=incorrect
+YeS=correct
