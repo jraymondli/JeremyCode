@@ -1,0 +1,18 @@
+Vim has two basic modes, insert and command, which are activated by pressing i and Esc, respectively.
+Here are the commands for command mode:
+1. using hjkl to move
+2. using w(to move to the start of the next word) e(to the end of the next word), and b(moves to the 
+beginning of the word).
+3. to find the next or previous occurrence of a character, use f and F(fo)
+4. It is also possible to combine numbers with words like 3w(which is www).
+5. to go to the next parantheses, press %
+6. to beginning of line:0 to end of line: $
+7. find next occurence of word:* find previous occurence of word:#
+8.gg takes you to beginning, G takes you to end
+9. to find words, press / the the word. to find previous or next occurencces, press N and n
+10. to insert a new line, press o
+11. x removes current character and X removes previous character.
+12. r replaces letter under cursor
+13. d deletes, and it can be used with other letter commands
+14. to repeat the previos command, press .
+15. important commands are: :w to save :q to quit, :q! to quit whithout saving, and u to undo.
