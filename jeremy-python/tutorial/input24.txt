@@ -1,5 +1,0 @@
-
-this isn't blank
-
- 
-^*not blank*^

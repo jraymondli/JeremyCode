@@ -1,0 +1,7 @@
+name:Jeremy Li
+phone:510-676-3481
+email:JeremyZihanLi@gmail.com
+courses:[D-33,A-7,E-24]
+name:Gregory Li
+phone:510-676-3481
+email:gregory.li.jian@gmail.com

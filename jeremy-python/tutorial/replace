@@ -1,0 +1,5 @@
+FH = open('A', 'a+')
+for line in FH:
+    #line.strip('\n')
+    #FH.append('a')
+    print line, 'A'

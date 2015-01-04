@@ -1,0 +1,14 @@
+def sq(a,b,c):
+    d = (a*a)+(b*b)
+    if d == c*c:
+        print a,b,c
+    else:
+	None
+
+def check():     
+     for a in range(1,21):
+     	 for b in range(1,21):
+             for c in range(1,21):
+	     	 sq(a,b,c)
+
+check()

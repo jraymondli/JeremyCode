@@ -1,0 +1,17 @@
+
+
+gvar = 10
+
+def change():
+   global gvar
+   gvar = 20
+
+def check():
+   print "2", gvar
+
+change()
+print gvar
+check()
+
+
+ 
