@@ -1,0 +1,32 @@
+
+a = input() 
+#amount of lines(rounds)of game
+b = []
+#list to store rounds of game
+for x in range(a):
+    b.append(raw_input().split(' '))
+#splits the player and his score
+d = {}
+#dictionary to store players and their scores
+for k,v in b:
+    d[k] = int(v) + int(d.get(k, 0))
+#seperates players and scores into keys and values. Also adds values of the 
+#same player up
+inverse = [(value, key) for key, value in d.items()]
+#reverses the location of the key and values and stores them in a list
+max_key = max(inverse)[1]
+#gets one of the keys with the largest value
+max_val = d.get(max_key, v)
+#gets the largest value
+d = {}
+#resets d
+for k,v in b:
+    d[k] = int(v) + int(d.get(k, 0))
+#reruns value addition to determine winner out of the winners of the same value
+    if d[k] >= max_val:
+       answer = k
+       break
+#checks for the first play to reach target value or above
+print answer
+
+    
