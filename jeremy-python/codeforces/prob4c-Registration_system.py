@@ -26,12 +26,15 @@ for x in range(a):
            else:
                print c
                b.append(c)
-       else:
-           
+       else:  
+           g == True
            while g == True:
               z = -1
-              z = z-1
-              g = c[z:] == int
+              try:
+                 int(g)
+              except ValueError:
+                 z = z-1
+                 g = c[z:]
            h = int(c[z:])
            h = h + 1
            c[:z]

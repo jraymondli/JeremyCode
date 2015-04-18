@@ -1,26 +1,28 @@
-"""
-L14:amount of lines(rounds)of game  
-L15:list to store rounds of game
-L16-17:splits the player and his score
-L18:dictionary to store players and their scores
-L19-20:seperates players and scores into keys and values. Also adds values of 
-L19-20:the same player up.
-L22:reverses the location of the key and values and stores them in a list
-L23:gets one of the keys with the largest value 
-L24:gets the largest value  
-L25:resets d
-L26-27:reruns value addition to determine tiebreakers
-L28-30:checks for the first play to reach target value or above."""
+##############################################################################
+# Answer to codeforces problem 2A-Winner
+# objective: find the person who gets the highest score first.
+#
+# The code first creates a variable to hold the number of rounds there is and 
+# a list to hold the outcome of each round. Then puts the rounds in the list.
+############################################################################## 
 a = input() 
 b = []
 for x in range(a):
     b.append(raw_input().split(' '))
+##############################################################################
+# Then it turns the list into a dictionary and adds each player's points 
+# together. After that, it gets the player who has the most points
+##############################################################################
 d = {}
 for k,v in b:
     d[k] = int(v) + int(d.get(k, 0))
 inverse = [(value, key) for key, value in d.items()]
 max_key = max(inverse)[1]
 max_val = d.get(max_key, v)
+##############################################################################
+# Last it resets the dictionary and replays the rounds to see who got the most 
+# points first in case there was a tie, and then it print's the winner's name
+##############################################################################
 d = {}
 for k,v in b:
     d[k] = int(v) + int(d.get(k, 0))

@@ -15,7 +15,7 @@ for x in range(a):
            if f == True:
                h = 1
                while f == True:
-                  c = c[1:]
+                  c = c[:-1]
                   c = ''.join(str(x) for x in (c,h))
                   f = c in b
                   if f == True:
@@ -30,8 +30,11 @@ for x in range(a):
            
            while g == True:
               z = -1
-              z = z-1
-              g = c[z:] == int
+              try:
+                 int(g)
+              except ValueError:
+                 z = z-1
+                 g = c[z:]
            h = int(c[z:])
            h = h + 1
            c[:z]
