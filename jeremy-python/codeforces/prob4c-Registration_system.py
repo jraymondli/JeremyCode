@@ -1,3 +1,4 @@
+# NOTE: THIS ONLY WORKS FOR TESTS 1-6.
 ##############################################################################
 # This is code for a registration system. First it is given a username. Then it
 # checks if there has been a copy. If there is, it checks the username with the
@@ -17,11 +18,12 @@ for x in range(a):
     if f == False:
        b.append(c)
        print"OK"
-##############################################################################
-# The above checks for wether there is a repetition in the usernames or not.
-# If there is none, it adds the name, if there isn't it continues.
-# Problem url: http://codeforces.com/problemset/problem/4/C
-##############################################################################
+       ########################################################################
+       # The above checks for wether there is a repetition in the usernames
+       # or not.
+       # If there is none, it adds the name, if there isn't it continues.
+       # Problem url: http://codeforces.com/problemset/problem/4/C
+       ########################################################################
     else:
        e = c[-1:]
        g = e == int
