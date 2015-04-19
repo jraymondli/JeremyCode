@@ -26,8 +26,8 @@ for x in range(a):
            else:
                print c
                b.append(c)
-       else:
-           
+       else:  
+           g == True
            while g == True:
               z = -1
               try:
