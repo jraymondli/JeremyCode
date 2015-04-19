@@ -6,12 +6,22 @@
 ##############################################################################
 a = input()
 b = []
+##############################################################################
+# a is the nuber of rounds that were played
+# b is the list to store those rounds
+# Next is if and else statements to check if users can be added. 
+##############################################################################
 for x in range(a):
     c = raw_input()
     f = c in b
     if f == False:
        b.append(c)
        print"OK"
+##############################################################################
+# The above checks for wether there is a repetition in the usernames or not.
+# If there is none, it adds the name, if there isn't it continues.
+# Problem url: http://codeforces.com/problemset/problem/4/C
+##############################################################################
     else:
        e = c[-1:]
        g = e == int
@@ -24,6 +34,7 @@ for x in range(a):
                   c = c[:-1]
                   c = ''.join(str(x) for x in (c,h))
                   f = c in b
+
                   if f == True:
                       h = h + 1
                   else:
@@ -32,7 +43,7 @@ for x in range(a):
            else:
                print c
                b.append(c)
-       else:  
+       else:
            g == True
            while g == True:
               z = -1
@@ -47,4 +58,3 @@ for x in range(a):
            ''.join(str(x) for x in (c,h))
            b.append(c)
            print c
-

@@ -1,3 +1,9 @@
+##############################################################################
+# This is code for a registration system. First it is given a username. Then it
+# checks if there has been a copy. If there is, it checks the username with the
+# highest number and then adds one. Then it registers the username and keeps 
+# registering until it is done.
+##############################################################################
 a = input()
 b = []
 for x in range(a):
