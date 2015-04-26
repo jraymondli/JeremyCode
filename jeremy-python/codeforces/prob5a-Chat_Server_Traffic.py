@@ -1,7 +1,12 @@
-b = []
-c = {}
+###############################################################################
+# This handles a chat traffic. every time someone siends a message, you 
+# multiply the message length by the aout of people online.
+# players coming on and off are marked by +<name> and -<name>
+# messages are in <name>:<msg> The code counts the message length and 
+# multiplies it by the amount of people on and adds it to the current amount of
+# traffic.
+###############################################################################
 e = 0
-f = 0
 d = 0
 y = 0
 for x in range(7):
