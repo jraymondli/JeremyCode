@@ -5,46 +5,45 @@
 # May 9, 2015
 ##############################################################################
  
-b = []
-e = 0
-f = 0
-i = 0
-j = 0
-g = 0
-l = 0
+input_dictionary = []
+input_scan_val = 0
+max_input_line_length = 0
+align_spaces = 0
+spacing_side1 = 0
+input_print_val = 0
+spacing_side_shifter = 0 
 while True:
     try:                                                     
-        a = raw_input()
-	b.append(a)
+        line_input = raw_input()
+	input_dictionary.append(line_input)
     except EOFError:
         break
-c = len(b)-1
-while e <= c: 
-    if f < len(b[e]):
-      f = len(b[e]) 
-      e = e+1
+max_dictionary_items = len(input_dictionary)-1
+while input_scan_val <= max_dictionary_items: 
+    if max_input_line_length < len(input_dictionary[input_scan_val]):
+        max_input_line_length = len(input_dictionary[input_scan_val]) 
+        input_scan_val = input_scan_val + 1
     else:
-      e = e + 1
-print '*' * (f+2)
-g = 0
-for x in range(len(b)):
-   h  = len(b[g])
-   i = f - h
-   if i == 0:
-      print ''.join(str(y) for y in ('*',b[g],'*'))
-   elif i/2 * 2 != i:
-      if l == 0:
-          j = (i-1)/2
-          k = (i+1)/2
-          print ''.join(str(y) for y in ('*',' ' * j,b[g],' ' * k,'*'))
-          l = 1
+        input_scan_val = input_scan_val + 1
+print '*' * (max_input_line_length+2)
+for x in range(len(input_dictionary)):
+   input_line_length  = len(input_dictionary[input_print_val])
+   align_spaces = max_input_line_length - input_line_length
+   if align_spaces == 0:
+      print ''.join(str(y) for y in ('*',input_dictionary[input_print_val],'*'))
+   elif align_spaces/2 * 2 != align_spaces:
+      if spacing_side_shifter == 0:
+          spacing_side1 = (align_spaces-1)/2
+          spacing_side2 = (align_spaces+1)/2
+          print ''.join(str(y) for y in ('*',' ' * spacing_side1,input_dictionary[input_print_val],' ' * spacing_side2,'*'))
+          spacing_side_shifter = 1
       else:
-         j = (i-1)/2
-         k = (i+1)/2
-         print ''.join(str(y) for y in ('*',' ' * k,b[g],' ' * j,'*'))
-         l = 0
+          spacing_side1 = (align_spaces-1)/2
+          spacing_side2 = (align_spaces+1)/2
+          print ''.join(str(y) for y in ('*',' ' * spacing_side2,input_dictionary[input_print_val],' ' * spacing_side1,'*'))
+          spacing_side_shifter = 0
    else:
-       j = i/2 
-       print ''.join(str(y) for y in ('*',' ' * j,b[g],' ' * j,'*'))  
-   g = g + 1
-print '*' * (f+2)
+       spacing_side1 = align_spaces/2 
+       print ''.join(str(y) for y in ('*',' ' * spacing_side1,input_dictionary[input_print_val],' ' * spacing_side1,'*'))  
+   input_print_val = input_print_val + 1
+print '*' * (max_input_line_length+2)
