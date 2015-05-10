@@ -37,7 +37,7 @@ for x in range(len(b)):
    i = f - h
    if i == 0:
       print ''.join(str(y) for y in ('*',b[g],'*'))
-   elif i/2 *2 != i:
+   elif i/2 * 2 != i:
       if l == 0:
           j = (i-1)/2
           k = (i+1)/2

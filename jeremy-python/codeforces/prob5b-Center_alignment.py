@@ -1,13 +1,8 @@
 ##############################################################################
-# This program does xyax...
+# This program takes an input and then aligns it by center and also surrounds 
+# it with astericks.
 # Author: Jeremy Li
-# May 2, 2015
-#
-# make these changes
-# 1) replace "d == 1" with True
-# 2) remove the try: except EOF... from the 2nd while loop
-# 3) debug the last part inside """ quotes
-#
+# May 9, 2015
 ##############################################################################
  
 b = []
