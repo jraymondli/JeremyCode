@@ -1,3 +1,11 @@
+##################################################
+# Answer to problem 3A, Shortest Path of the King
+# Finds the shortest amount of moves from the first set to second set of coordinates based off of the kings movement
+#
+# currently works, but not ready for formal testing
+# must put answers into a list, print the amount of items in the list then the items in the list itself.
+# more comments will be added in final version
+##################################################
 xcoord = []
 ycoord = []
 dict_getter = "'"
@@ -24,40 +32,61 @@ elif ycoord[0] == ycoord[1]:
         for x in range(xcoord_diff * -1):
             print 'R'                     
 elif ycoord[0] > ycoord[1]:
+        #if the location is under the king
         if xcoord[0] > xcoord[1]:
-            while ycoord[0] > ycoord[1] or xcoord[0] > xcoord[1]:
+            #if the location is left of the king
+            while ycoord[0] > ycoord[1] and xcoord[0] > xcoord[1]:
                 print "LD"
                 ycoord[0] = ycoord[0]-1
                 xcoord[0] = xcoord[0]-1
-                if xcoord[0] == xcoord[1]:
-                    break
-                if ycoord[0] == ycoord[1]:
-                    break
-            if ycoord[0] == ycoord[1]:
-                while xcoord[0] != xcoord[1]:
-                    print "D"
-                    xcoord[0] = xcoord[0] + 1
-            else:
-                while ycoord[0] != ycoord[1]:
-                    print "L"
-                    ycoord[0] = ycoord[0] + 1
-        elif xcoord[0] < xcoord[1]:
-            print "unfinish"    
-        else:
             while ycoord[0] > ycoord[1]:
                 print "D"
+                ycoord[0] = ycoord[0] - 1
+            while xcoord[0] > xcoord[1]:
+                print "L"
+                xcoord[0] = xcoord[0] - 1
+        elif xcoord[0] < xcoord[1]:
+            #if the location is right of the king
+            while ycoord[0] > ycoord[1] and xcoord[0] < xcoord[1]:
+                print "RD"
                 ycoord[0] = ycoord[0]-1
-else:
-    print "error"
-'''            
-elif xcoord[0] > xcoord[1]:
+                xcoord[1] = xcoord[1]-1
+            while ycoord[0] > ycoord[1]:
+                print "D"
+                ycoord[0] = ycoord[0] - 1
+            while xcoord[0] < xcoord[1]:
+                print "R"
+                xcoord[0] = xcoord[0] + 1
+        else:
+            print"0"
+elif ycoord[0] < ycoord[1]:
+        #if the location is above the king                                                                           
         if xcoord[0] > xcoord[1]:
-            elif:
-                xcoord[0] <xcoord[1]:
-            else:
-                while ycoord[0] > ycoord[1]:
-                    print "D"
-                    ycoord[0] = ycoord[0]-1
-                    
-'''
+            #if the location is left of the king                                      
+            while ycoord[0] < ycoord[1] and xcoord[0] > xcoord[1]:
+                print "LU"
+                ycoord[0] = ycoord[0] + 1
+                xcoord[0] = xcoord[0] - 1
+            while ycoord[0] < ycoord[1]:
+                print "U"
+                ycoord[0] = ycoord[0] + 1
+            while xcoord[0] > xcoord[1]:
+                print "L"
+                xcoord[0] = xcoord[0] - 1
+        elif xcoord[0] < xcoord[1]:
+            #if the location is right of the king                                                                   
+            while ycoord[0] < ycoord[1] and xcoord[0] < xcoord[1]:
+                print "RU"
+                ycoord[0] = ycoord[0]+1
+                xcoord[1] = xcoord[1]-1
+            while ycoord[0] < ycoord[1]:
+                print "U"
+                ycoord[0] = ycoord[0] + 1
+            while xcoord[0] < xcoord[1]:
+                print "R"
+                xcoord[0] = xcoord[0] + 1
+        else:
+            print "0"
+
+
 
