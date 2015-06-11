@@ -1,3 +1,134 @@
-X.X
-X.0
-0.0
+0X.
+.X.
+0X0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[?1049h[?12;25h[?1h=[35;1H[?25l----:---F1  [1m*scratch*   [0m   All L1     (Fundamental)-------------------------------------------------------------------------
+[A[H[?12l[?25h[?12;25h[H[2J[36d[?25lLoading encoded-kb...[K[H[?12l[?25h[?12;25h[36;22H[?25ldone[H[?12l[?25h[?12;25h[36d[K[?1l>[?12l[?25h[?1049l[39;49m[?1049h[?12;25h[?1h=[H[2J[36d[K[?1l>[?12l[?25h[?1049l[39;49m[?1049h[?12;25h[?1h=[36;1H[?25lFor information about the GNU Project and its goals, type C-h C-p.[K[H
+[?12l[?25h[?12;25h[36d[?25lLoading image...[K[H
+[?12l[?25h[?12;25h[36;17H[?25ldone[H
+[?12l[?25h[?12;25h[36;9H[?25lpython...[K[H
+[?12l[?25h[?12;25h[36;9H[?25leasymenu...[H
+[?12l[?25h[?12;25h[36;20H[?25ldone[H
+[?12l[?25h[?12;25h[36;9H[?25lpython...done[K[H
+[?12l[?25h[?12;25h[36d[?25lLoading python...done[K[H[38;5;136mboard[39;49m = [][K
+[38;5;129mfor[39;49m x [38;5;129min[39;49m range(3):[K
+    listOfMoves = list(raw_input())[K
+    board.append(listOfMoves[0])[K
+    board.append(listOfMoves[1])[K
+    board.append(listOfMoves[2])[K
+[38;5;129mif[39;49m board.count([38;5;138m'X'[39;49m) != board.count([38;5;138m'0'[39;49m)+1 [38;5;129mand[39;49m board.count([38;5;138m'X'[39;49m) != board.count([38;5;138m'0'[39;49m):[K
+    [38;5;129mprint[39;49m [38;5;138m"illegal"[39;49m[K
+[38;5;129melif[39;49m board.count([38;5;138m'X'[39;49m) >= 3 [38;5;129mand[39;49m board.count([38;5;138m'.'[39;49m) == 0:[K
+    [38;5;129mif[39;49m board[0] == board[1] == board[2] == [38;5;138m'X'[39;49m [38;5;129mor[39;49m board[3] == board[4] == board[5] == [38;5;138m'X'[39;49m [38;5;129mor[39;49m board[6] == board[7] == board[\
+[A
+8] == [38;5;138m'X'[39;49m:[K
+        [38;5;129mprint[39;49m [38;5;138m"the first player won"[39;49m[K
+    [38;5;129mif[39;49m board[0] == board[3] == board[6] == [38;5;138m'X'[39;49m [38;5;129mor[39;49m board[1] == board[4] == board[7 == [38;5;138m'X'[39;49m] [38;5;129mor[39;49m board[2] == board[5] == board[\
+[A
+8] == [38;5;138m'X'[39;49m:[K
+        [38;5;129mprint[39;49m [38;5;138m"the first player won"[39;49m[K
+    [38;5;129mif[39;49m board[0] == board[4] == board[8] == [38;5;138m'X'[39;49m [38;5;129mor[39;49m board[2] == board[4] == board[6] == [38;5;138m'X'[39;49m:[K
+        [38;5;129mprint[39;49m [38;5;138m"the first player won"[39;49m[K
+[38;5;129melif[39;49m board.count([38;5;138m'0'[39;49m) >= 3 [38;5;129mand[39;49m board.count([38;5;138m'.'[39;49m) == 0:[K
+    [38;5;129mif[39;49m board[0] == board[1] == board[2] == [38;5;138m'0'[39;49m [38;5;129mor[39;49m board[3] == board[4] == board[5] == [38;5;138m'0'[39;49m [38;5;129mor[39;49m board[6] == board[7] == board[\
+[A
+8] == [38;5;138m'0'[39;49m:[K
+        [38;5;129mprint[39;49m [38;5;138m"the second player won"[39;49m[K
+    [38;5;129mif[39;49m board[0] == board[3] == board[6] == [38;5;138m'0'[39;49m [38;5;129mor[39;49m board[1] == board[4] == board[7] == [38;5;138m'0'[39;49m [38;5;129mor[39;49m board[2] == board[5] == board[\
+[A
+8] == [38;5;138m'0'[39;49m:[K
+        [38;5;129mprint[39;49m [38;5;138m"the second player won"[39;49m[K
+    [38;5;129mif[39;49m board[0] == board[4] == board[8] == [38;5;138m'0'[39;49m [38;5;129mor[39;49m board[2] == board[4] == board[6] == [38;5;138m'0'[39;49m:[K
+        [38;5;129mprint[39;49m [38;5;138m"the second player won"[39;49m[K
+[38;5;129melif[39;49m board.count([38;5;138m'.'[39;49m) != 0:[K
+    [38;5;129mif[39;49m board.count([38;5;138m'X'[39;49m) == board.count([38;5;138m'0'[39;49m) == 3:[K
+        [38;5;129mprint[39;49m [38;5;138m'illegal'[39;49m[K
+    [38;5;129melif[39;49m board.count([38;5;138m'X'[39;49m) == board.count([38;5;138m'0'[39;49m):[K
+        [38;5;129mprint[39;49m [38;5;138m"first"[39;49m[K
+    [38;5;129melif[39;49m board.count([38;5;138m'X'[39;49m) == board.count([38;5;138m'0'[39;49m) + 1:[K
+        [38;5;129mprint[39;49m [38;5;138m"second"[39;49m[K
+    [38;5;129melse[39;49m:[K
+[30m[48;5;250m-uu-:---F1  [39;49m[1m[30m[48;5;250mprob3c-Tic_Tac_Toe.py[0m[39;49m[30m[48;5;250m   Top L1     (Python)---------------------------------------------------------------------[39;49m
+[A[H[?12l[?25h[?12;25h[1;34r[1;1H[1L[1;36r[36;1H[K[H[K[35;6H[?25l[30m[48;5;250m**-F1  [39;49m[1m[30m[48;5;250mprob3c-Tic_Tac_Toe.py[0m[39;49m[30m[48;5;250m   Top L2[39;49m[H
+[?12l[?25h[?12;25h[1;34r[2;1H[1L[1;36r[2;1H[K[35;42H[?25l[30m[48;5;250m3[39;49m[H
+
+[?12l[?25h[?12;25h[1;34r[5;1H[1L[1;36r[3;1H[K
+[?25l[38;5;136mboard[39;49m = [][K
+[38;5;129mfor[39;49m x [38;5;129min[39;49m range(3):[K[35;42H[30m[48;5;250m4[39;49m[4;1H[?12l[?25h[?12;25h[1;34r[6;1H[1L[1;36r[4;1H[K
+[?25l[38;5;136mboard[39;49m = [][K
+[38;5;129mfor[39;49m x [38;5;129min[39;49m range(3):[K[35;42H[30m[48;5;250m5[39;49m[5;1H[?12l[?25h[?12;25h[1;34r[7;1H[1L[1;36r[5;1H[K
+[?25l[38;5;136mboard[39;49m = [][K
+[38;5;129mfor[39;49m x [38;5;129min[39;49m range(3):[K[35;42H[30m[48;5;250m6[39;49m[6;1H[?12l[?25h[?12;25h[1;34r[8;1H[1L[1;36r[6;1H[K
+[?25l[38;5;136mboard[39;49m = [][K
+[38;5;129mfor[39;49m x [38;5;129min[39;49m range(3):[K[35;42H[30m[48;5;250m7[39;49m[7;1H[?12l[?25h[?12;25h[1;34r[9;1H[1L[1;36r[7;1H[K
+[?25l[38;5;136mboard[39;49m = [][K
+[38;5;129mfor[39;49m x [38;5;129min[39;49m range(3):[K[35;42H[30m[48;5;250m8[39;49m[8;1H[?12l[?25h[?12;25h[1;34r[10;1H[1L[1;36r[8;1H[K
+[?25l[38;5;136mboard[39;49m = [][K
+[38;5;129mfor[39;49m x [38;5;129min[39;49m range(3):[K[35;42H[30m[48;5;250m9[39;49m[9;1H[?12l[?25h[?12;25h[1;34r[11;1H[1L[1;36r[9;1H[K
+[?25l[38;5;136mboard[39;49m = [][K
+[38;5;129mfor[39;49m x [38;5;129min[39;49m range(3):[K[35;42H[30m[48;5;250m10[39;49m[10;1H[?12l[?25h[?12;25h[1;34r[12;1H[1L[1;36r[10;1H[K
+[?25l[38;5;136mboard[39;49m = [][K
+[38;5;129mfor[39;49m x [38;5;129min[39;49m range(3):[K[35;43H[30m[48;5;250m1[39;49m[11;1H[?12l[?25h[?12;25h[1;34r[13;1H[1L[1;36r[11;1H[K
+[?25l[38;5;136mboard[39;49m = [][K
+[38;5;129mfor[39;49m x [38;5;129min[39;49m range(3):[K[35;43H[30m[48;5;250m2[39;49m[12;1H[?12l[?25h[?12;25h[36d[?25l[38;5;20mSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) [39;49m[?12l[?25h[?12;25h[?25lSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) RET[?12l[?25h[?12;25h[K[12d[36d[?25l[38;5;20mModified buffers exist; exit anyway? (yes or no) [39;49m[?12l[?25h[?12;25h[?25lPlease answer yes or no.[K[12;1H[?12l[?25h[?12;25h[36d[12d[36d[?25l[38;5;20mSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) [39;49m[?12l[?25h[?12;25h[?25lSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) C-x[?12l[?25h[?12;25h[?25lType C-h for help.[K[?12l[?25h[?12;25h[?25l[38;5;20mSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) [39;49m[?12l[?25h[?12;25h[?25lSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) C-c[?12l[?25h[?12;25h[?25lType C-h for help.[K[?12l[?25h[?12;25h[?25l[38;5;20mSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) [39;49m[?12l[?25h[?12;25h[?25lSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) C-x[?12l[?25h[?12;25h[?25lType C-h for help.[K[?12l[?25h[?12;25h[?25l[38;5;20mSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) [39;49m[?12l[?25h[?12;25h[?25lSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) C-c[?12l[?25h[?12;25h[?25lType C-h for help.[K[?12l[?25h[?12;25h[?25l[38;5;20mSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) [39;49m[?12l[?25h[?12;25h[?25lSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) C-x[?12l[?25h[?12;25h[?25lType C-h for help.[K[?12l[?25h[?12;25h[?25l[38;5;20mSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) [39;49m[?12l[?25h[?12;25h[?25lSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) `[?12l[?25h[?12;25h[?25lType C-h for help.[K[?12l[?25h[?12;25h[?25l[38;5;20mSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) [39;49m[?12l[?25h[?12;25h[?25lSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) ESC[?12l[?25h[?12;25h[?25lType C-h for help.[K[?12l[?25h[?12;25h[?25l[38;5;20mSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) [39;49m[?12l[?25h[?12;25h[?25lSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) ESC[?12l[?25h[?12;25h[?25lType C-h for help.[K[?12l[?25h[?12;25h[?25l[38;5;20mSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) [39;49m[?12l[?25h[?12;25h[?25lSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) ESC[?12l[?25h[?12;25h[?25lType C-h for help.[K[?12l[?25h[?12;25h[?25l[38;5;20mSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) [39;49m[?12l[?25h[?12;25h[?25lSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) C-x[?12l[?25h[?12;25h[?25lType C-h for help.[K[?12l[?25h[?12;25h[?25l[38;5;20mSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) [39;49m[?12l[?25h[?12;25h[?25lSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) C-c[?12l[?25h[?12;25h[?25lType C-h for help.[K[?12l[?25h[?12;25h[?25l[38;5;20mSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) [39;49m[?12l[?25h[?12;25h[?25lSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) C-x[?12l[?25h[?12;25h[?25lType C-h for help.[K[?12l[?25h[?12;25h[?25l[38;5;20mSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) [39;49m[?12l[?25h[?12;25h[?25lSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) C-c[?12l[?25h[?12;25h[?25lType C-h for help.[K[?12l[?25h[?12;25h[?25l[38;5;20mSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d or C-h) [39;49m[?12l[?25h[?12;25h[?25lSave file /Users/Jeremy/JeremyCode/jeremy-python/codeforces/prob3c-Tic_Tac_Toe.py? (y, n, !, ., q, C-r, d o

@@ -8,7 +8,7 @@
 a = input()
 b = []
 ##############################################################################
-# a is the nuber of rounds that were played
+# a is the number of rounds that were played
 # b is the list to store those rounds
 # Next is if and else statements to check if users can be added. 
 ##############################################################################
