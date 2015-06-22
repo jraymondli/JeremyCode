@@ -1,10 +1,11 @@
 ##################################################
 # Solution for prob 6b, President's office
-# unfinished, on test 8
+# unfinished, on test 18
 ##################################################
 layout = []
 prezDeskY = []
 prezDeskX = []
+X = False
 deskCounter = 0
 subordinates = 0
 coordinatesAndColor = raw_input().split(' ')
@@ -25,42 +26,53 @@ for x in range(len(layout[prezDeskY[0]])):
     if layout[prezDeskY[deskCounterY]][deskCounter] == Color:
         prezDeskX.append(deskCounter)
     deskCounter = deskCounter + 1
-    if len(prezDeskY) > 1 and deskCounterY < len(prezDeskY):
+    if len(prezDeskY) > 1 and deskCounterY + 1 < len(prezDeskY):
         deskCounterY = deskCounterY + 1
 deskCounter = 0
 deskCounterY = 0
 for x in range(len(prezDeskX)*len(prezDeskY)):
         try:
             subDeskFinder = layout[prezDeskY[deskCounterY]-1][prezDeskX[deskCounter]]
-            if subDeskFinder != '.' and subDeskFinder not in subDeskList:
+            #print subDeskFinder
+            if subDeskFinder != '.' and subDeskFinder not in subDeskList and prezDeskX[deskCounter] >= 0:
                 subordinates = subordinates + 1
                 subDeskList.append(layout[prezDeskY[deskCounterY]-1][prezDeskX[deskCounter]])
+                #print '[1]'
         except IndexError:
             subordinates = subordinates
         try:
             subDeskFinder = layout[prezDeskY[deskCounterY]+1][prezDeskX[deskCounter]]
-            if subDeskFinder != '.' and subDeskFinder not in subDeskList:
+            #print subDeskFinder
+            if subDeskFinder != '.' and subDeskFinder not in subDeskList and prezDeskX[deskCounter] >= 0:
                 subordinates = subordinates + 1
                 subDeskList.append(layout[prezDeskY[deskCounterY]+1][prezDeskX[deskCounter]])
+                #print '[2]'
         except IndexError:
             subordinates = subordinates
         try:
             subDeskFinder = layout[prezDeskY[deskCounterY]][prezDeskX[deskCounter]-1]
-            if subDeskFinder != '.' and subDeskFinder not in subDeskList:
+            #print subDeskFinder
+            if subDeskFinder != '.' and subDeskFinder not in subDeskList and prezDeskX[deskCounter]-1 >= 0:
                 subordinates = subordinates + 1
                 subDeskList.append(layout[prezDeskY[deskCounterY]][prezDeskX[deskCounter]-1])
+                #print '[3]'
         except IndexError:
             subordinates = subordinates
         try:
             subDeskFinder = layout[prezDeskY[deskCounterY]][prezDeskX[deskCounter]+1]
-            if subDeskFinder != '.' and subDeskFinder not in subDeskList:
+            #print subDeskFinder
+            if subDeskFinder != '.' and subDeskFinder not in subDeskList and prezDeskX[deskCounter] >= 0:
                 subordinates = subordinates + 1
                 subDeskList.append(layout[prezDeskY[deskCounterY]][prezDeskX[deskCounter]+1])
+                #print '[4]'
         except IndexError:
             subordinates = subordinates
-        if len(prezDeskX) > 1 and deskCounter < len(prezDeskX):
+        if len(prezDeskX) > 1 and deskCounter < len(prezDeskX)-1:
             deskCounter = deskCounter + 1
-        if len(prezDeskY) > 1 and deskCounterY < len(prezDeskY):
+        else:
+            X = True
+        if len(prezDeskY) > 1 and deskCounterY < len(prezDeskY)-1 and X == True:
             deskCounterY = deskCounterY + 1
+            deskCounter = 0
+            X = False
 print subordinates
- 
