@@ -1,6 +1,6 @@
 ##################################################
 # Solution for prob 6b, President's office
-# unfinished, on test 14
+# unfinished, on test 18
 ##################################################
 layout = []
 prezDeskY = []
@@ -30,6 +30,7 @@ for x in range(len(layout[prezDeskY[0]])):
         deskCounterY = deskCounterY + 1
 deskCounter = 0
 deskCounterY = 0
+print prezDeskY
 for x in range(len(prezDeskX)*len(prezDeskY)):
         try:
             subDeskFinder = layout[prezDeskY[deskCounterY]-1][prezDeskX[deskCounter]]
@@ -75,15 +76,5 @@ for x in range(len(prezDeskX)*len(prezDeskY)):
             deskCounterY = deskCounterY + 1
             deskCounter = 0
             X = False
-        '''
-        if len(prezDeskX) > 1 and deskCounter < len(prezDeskX)-1 and Y == False:
-            deskCounter = deskCounter + 1
-        if len(prezDeskY) > 1 and deskCounterY < len(prezDeskY)-1:
-            deskCounterY = deskCounterY + 1
-            Y = True
-        else:
-            Y = False
-        print deskCounter, deskCounterY
-        '''
 print subDeskList
 print subordinates

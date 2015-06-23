@@ -30,11 +30,12 @@ for x in range(len(layout[prezDeskY[0]])):
         deskCounterY = deskCounterY + 1
 deskCounter = 0
 deskCounterY = 0
+print prezDeskY
 for x in range(len(prezDeskX)*len(prezDeskY)):
         try:
             subDeskFinder = layout[prezDeskY[deskCounterY]-1][prezDeskX[deskCounter]]
             #print subDeskFinder
-            if subDeskFinder != '.' and subDeskFinder not in subDeskList and prezDeskX[deskCounter] >= 0:
+            if subDeskFinder != '.' and subDeskFinder not in subDeskList and prezDeskX[deskCounter] >= 0 and prezDeskY[deskCounterY]-1 >= 0:
                 subordinates = subordinates + 1
                 subDeskList.append(layout[prezDeskY[deskCounterY]-1][prezDeskX[deskCounter]])
                 #print '[1]'
@@ -75,4 +76,5 @@ for x in range(len(prezDeskX)*len(prezDeskY)):
             deskCounterY = deskCounterY + 1
             deskCounter = 0
             X = False
+print subDeskList
 print subordinates
