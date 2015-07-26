@@ -12,7 +12,7 @@ for x in range(8):
         strokes = strokes + 1
     counter = counter + 1
 
-if chessboardRows == ['BBBBBBBB', 'BBBBBBBB', 'BBBBBBBB', 'BBBBBBBB', 'BBBBBBBB', 'BBBBBBBB', 'BBBBBBBB', 'BBBBBBBB']
+if chessboardRows == ['BBBBBBBB', 'BBBBBBBB', 'BBBBBBBB', 'BBBBBBBB', 'BBBBBBBB', 'BBBBBBBB', 'BBBBBBBB', 'BBBBBBBB']:
     print '8'
 else:
     strokes = 0

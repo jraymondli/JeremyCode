@@ -26,20 +26,6 @@ while a + b + 1 < bars:
     counter = counter + 1
 
 #print a, b
-'''
-for x in range(bars):
-    if alice + int(times[counter]) <= totalTime/2:
-        alice = alice + int(times[counter])
-        a = a + 1 
-    else:
-        break
-    if bob + int(times[bars-1-counter]) <= totalTime/2:
-        bob = bob + int(times[bars-1-counter])
-        b = b + 1
-    else:
-        break
-    counter = counter + 1
-'''
 #print alice, bob
 if a + b != bars:
     if alice > bob:
