@@ -17,9 +17,12 @@ elif C == 0:
 else:
     x = 0
     y = float(-C-A*x)/float(B)
-    while y != int:
+    while y != int or x < 10:
         y = float(-C-A*x)/float(B)
         if y - int(y) == 0:
             break
         x = x + 1
-    print x, int(y)
+    if x < 10:
+        print x, int(y)
+    else:
+        print -1
