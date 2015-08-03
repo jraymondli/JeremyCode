@@ -17,12 +17,12 @@ elif C == 0:
 else:
     x = 0
     y = float(-C-A*x)/float(B)
-    while y != int or x < 10:
-        y = float(-C-A*x)/float(B)
-        if y - int(y) == 0:
-            break
-        x = x + 1
-    if x < 10:
-        print x, int(y)
+    if A < 1000:
+        for x in range(abs(A)):
+            y = float(-C-A*x)/float(B)
+            if y - int(y) == 0:
+                print x, int(y)
+                break
+            x = x + 1
     else:
         print -1
