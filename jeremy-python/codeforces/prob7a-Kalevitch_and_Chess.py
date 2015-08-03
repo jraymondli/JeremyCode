@@ -7,7 +7,6 @@
 chessboardRows = []
 strokes = 0
 strokePosition = []
-counter = 0
 for x in range(8):
     input = raw_input()
     chessboardRows.append(input)
@@ -22,24 +21,20 @@ if chessboardRows == ['BBBBBBBB', 'BBBBBBBB', 'BBBBBBBB', \
     ##################################################
 else:
     strokes = 0
-    counter = 0
     for x in range(8):
         if 'B' == chessboardRows[0][counter] ==\ 
-        chessboardRows[1][counter] == chessboardRows[2][counter] ==\
-        chessboardRows[3][counter] == chessboardRows[4][counter] ==\
-        chessboardRows[5][counter] == chessboardRows[6][counter] ==\ 
-        chessboardRows[7][counter]:
+        chessboardRows[1][x] == chessboardRows[2][x] ==\
+        chessboardRows[3][x] == chessboardRows[4][x] ==\
+        chessboardRows[5][x] == chessboardRows[6][x] ==\ 
+        chessboardRows[7][x]:
             strokes = strokes + 1
-        counter = counter + 1
-    counter = 0
     for x in range(8): 
         if 'B' == chessboardRows[counter][0] ==\ 
-        chessboardRows[counter][1] == chessboardRows[counter][2] ==\ 
-        chessboardRows[counter][3] == chessboardRows[counter][4] ==\ 
-        chessboardRows[counter][5] == chessboardRows[counter][6] ==\
-        chessboardRows[counter][7]:
+        chessboardRows[x][1] == chessboardRows[x][2] ==\ 
+        chessboardRows[x][3] == chessboardRows[x][4] ==\ 
+        chessboardRows[x][5] == chessboardRows[x][6] ==\
+        chessboardRows[x][7]:
             strokes = strokes + 1
-        counter = counter + 1
     print strokes
 ##################################################
 # The rest of the code accounts for calculating the amount of strokes nessesary.
