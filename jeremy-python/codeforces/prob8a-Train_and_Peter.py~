@@ -6,31 +6,13 @@ len1 = len(awake1)
 len2 = len(awake2)
 forward = False
 backward = False
-if 'aaaaaaaaaaaaaaaaaaaaaaaaaaaa' in flagsForward:
-    print 'fantasy'
 if awake1 in flagsForward:
-    for x in range(len(flagsForward)):
-        if len(awake1) == 1:
-            if awake1 in flagsForward[x]:
-                pos1 = x
-                break
-        if len(awake1) > 1:
-            if awake1 in flagsForward[:x]:
-                pos1 = x
-                break
-    if awake2 in flagsForward[pos1:]:
+    pos1 = flagsForward.index(awake1)
+    if awake2 in flagsForward[pos1-1+len(awake1):]:
         forward = True
 if awake1 in flagsBackward:
-    for y in range(len(flagsBackward)):
-        if len(awake1) == 1:
-            if awake1 in flagsBackward[y]:
-                pos2 = y
-                break
-        if len(awake1) > 1:
-            if awake1 in flagsBackward[:y]:
-                pos2 = y
-                break
-    if awake2 in flagsBackward[pos2:]:
+    pos2 = flagsBackward.index(awake1)
+    if awake2 in flagsBackward[pos2-1+len(awake1):]:
         backward = True
 print forward
 print backward
