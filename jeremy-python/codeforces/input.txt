@@ -1,7 +1,7 @@
-aaaaaaabaaaaaaaaaaaaaaaab
-aaaaaaab
-aaaaaaab
-
+0 0
+2
+1 1
+-1 1
 
 
 [?1049h[?12;25h[?1h=[35;1H[?25l----:---F1  [1m*scratch*   [0m   All L1     (Fundamental)-------------------------------------------------------------------------

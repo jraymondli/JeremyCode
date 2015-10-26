@@ -1,0 +1,35 @@
+import math
+bag = raw_input().split(' ')
+objects = int(raw_input())
+objectsPos = []
+objectsDist = []
+holdCount = 0
+objectsOrd = [0]
+for x in range(objects):
+    objectsPos.append(raw_input().split(' '))
+for x in range(objects):
+    objectsDist.append(abs(int(objectsPos[0][x])) - abs(int(bag[0])) + abs(int(objectsPos[1][x])) - abs(int(bag[1])))
+objectsOrd.append(objectsDist.index(min(objectsDist))+1)
+print objectsOrd
+
+objects = objects - 1
+
+holdCount = holdCount + 1
+
+
+
+
+
+
+
+
+'''
+objectsPos.pop(0)
+objectsDist.pop(objectsDist.index(min(objectsDist)))
+print objectsDist
+if len(objectsPos) == 1:
+    objectsOrd.append(objectsDist.index(min(objectsDist)))
+    print objectsOrd
+
+
+'''
