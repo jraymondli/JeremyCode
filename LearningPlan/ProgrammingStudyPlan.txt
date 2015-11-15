@@ -1,0 +1,20 @@
+
+
+Java:
+
+o Up and Running with Java
+
+  - pre-request
+    * Basic Principles of Programming
+      . defining variables
+      . assigning data types
+      . creating method or function
+
+ 
+  - IDE
+
+o Download the exercise file
+
+o set up IDE
+ 
+	
