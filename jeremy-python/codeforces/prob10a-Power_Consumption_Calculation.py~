@@ -1,5 +1,9 @@
 ##################################################
-#
+# http://codeforces.com/problemset/problem/10/A
+# Progam that determines power consumption given:
+# power consumed:on, screensaver, sleep
+# time before:screensaver, sleep
+# work periods
 ##################################################
 inputs = raw_input().split(' ')
 shutdownTimes = []
@@ -16,10 +20,16 @@ P2 = int(inputs[2])
 P3 = int(inputs[3])
 T1 = int(inputs[4])
 T2 = int(inputs[5])
+##################################################
+# Above takes all input and sorts it
+##################################################
 counter = 0
 for x in range(int(n)):
     energy = energy + int(P1*(int(times[counter][1])-int(times[counter][0])))
     counter = counter + 1
+##################################################
+# energy consumed during use of device
+##################################################
 counter = 0
 for x in range(int(n)-1):
     counter = int(times[x + 1][0])-int(times[x][1])
@@ -32,5 +42,8 @@ for x in range(int(n)-1):
         else:
             energy = energy + T2*P2
             energy = energy + (counter - (T1+T2))*P3
+##################################################
+# Energy consumed during screensaver&sleep mode
+##################################################
 print energy
 
