@@ -1,4 +1,4 @@
-# Verion 1: uses less memory but more time
+x# Verion 1: uses less memory but more time
 '''
 import array
 number = int(input())

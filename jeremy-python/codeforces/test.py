@@ -1,11 +1,11 @@
-b = [] 
-
-while True:
-    try:
-        a = raw_input()
-        print a
-        b.append(a)
-    except EOFError:
-        break
-
-
+x = 0
+y = 0
+global x
+def func():
+    global x, y 
+    x = x + 1
+    if x > 2:
+        return
+    func()
+func()
+print x

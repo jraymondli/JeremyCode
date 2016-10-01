@@ -9,7 +9,7 @@ inputs = raw_input().split(' ')
 shutdownTimes = []
 times = []
 energy = 0
-while 1 == 1:
+while True:
     try:
         times.append(raw_input().split(' '))
     except EOFError:
@@ -24,14 +24,14 @@ T2 = int(inputs[5])
 # Above takes all input and sorts it
 ##################################################
 counter = 0
-for x in range(int(n)):
+for x in range(n):
     energy = energy + int(P1*(int(times[counter][1])-int(times[counter][0])))
     counter = counter + 1
 ##################################################
 # energy consumed during use of device
 ##################################################
 counter = 0
-for x in range(int(n)-1):
+for x in range(n-1):
     counter = int(times[x + 1][0])-int(times[x][1])
     if T1 >= counter:
         energy = energy + counter*P1
