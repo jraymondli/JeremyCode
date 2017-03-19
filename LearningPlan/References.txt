@@ -1,0 +1,6 @@
+
+
+o Lynda.com
+  - Foundations of Programming: Object-Oriented Design
+  - Foundations of Programming: Fundamentals
+
